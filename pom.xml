@@ -6,8 +6,8 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.1.4</version> <!-- Corrected version -->
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>3.1.4</version>
+		<relativePath/>
 	</parent>
 
 	<groupId>com.me</groupId>
@@ -60,7 +60,7 @@
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
-			<version>1.18.28</version> <!-- Ensure this is the desired version -->
+			<version>1.18.30</version>
 			<scope>provided</scope>
 		</dependency>
 
@@ -83,7 +83,7 @@
 						<path>
 							<groupId>org.projectlombok</groupId>
 							<artifactId>lombok</artifactId>
-							<version>1.18.28</version>
+							<version>1.18.30</version>
 						</path>
 					</annotationProcessorPaths>
 				</configuration>
