@@ -1,6 +1,7 @@
 package com.me.controllers;
 
 import com.me.models.NewFavouriteRequest;
+import com.me.models.entities.MyFavourite;
 import com.me.services.FavouriteService;
 import com.me.models.UpdateFavouriteRequest;
 import jakarta.validation.Valid;
@@ -8,6 +9,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.Optional;
 
 @Validated
 @RestController
@@ -20,13 +24,14 @@ public class UserFavouritesController {
     FavouriteService favouriteService = new FavouriteService();
 
     @GetMapping("{username}")
-    public HttpStatus getFavouriteByUserName(@PathVariable String userName) {
+    public ArrayList<MyFavourite> getFavouriteByUserName(@PathVariable String userName) {
         return favouriteService.getFavouriteByUserName(userName);
     }
 
-    @GetMapping("{criteria}")
-    public HttpStatus getSharedFave(@PathVariable String criteria) {
-        return favouriteService.getSharedFave(criteria);
+    //Returns a list of all users that have the same favourite song
+    @GetMapping("{song}")
+    public ArrayList<String> getFans(@PathVariable String song) {
+        return favouriteService.getFans(song);
     }
 
     @PostMapping("create")
