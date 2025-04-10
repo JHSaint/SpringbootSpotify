@@ -1,0 +1,15 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/myspotifydb
+    username: root
+    password:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  liquibase:
+    enabled: false
+  profiles:
+    active: local
+

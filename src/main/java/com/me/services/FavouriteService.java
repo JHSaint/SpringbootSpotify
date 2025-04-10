@@ -4,14 +4,10 @@ import com.me.models.Favourite;
 import com.me.models.NewFavouriteRequest;
 import com.me.models.entities.MyFavourite;
 import com.me.models.repositories.SpotifyFaveRepository;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
-
-import java.math.BigInteger;
-import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
